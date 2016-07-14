@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# Data downloaded from http://www.cdc.gov/nchs/data_access/vitalstatsonline.htm.
+
 unzip -qq -c  Nat2014US.zip | cut --output-delimiter=" " -c 9-12,13-14,23,475   | bzip2 >nat-2014.csv.bz2
 funzip Nat2013US.zip | cut --output-delimiter=" " -c 15-18,19-20,436,29  | bzip2 >nat-2013.csv.bz2
 funzip Nat2012us.zip | cut --output-delimiter=" " -c 15-18,19-20,436,29  | bzip2 >nat-2012.csv.bz2

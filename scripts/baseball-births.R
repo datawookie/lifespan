@@ -1,3 +1,5 @@
+# Scrape data for baseball birthdates.
+
 library(rvest)
 library(dplyr)
 
@@ -14,10 +16,8 @@ baseball <- with(month,
                  })
 )
 baseball = unlist(baseball, recursive = FALSE)
-baseball = do.call(rbind, baseball)
-#
-baseball = mutate(baseball,
-                  month = factor(month, labels = month.abb)
-) %>% select(Name, Year = Born, Month = month, Day = day)
+baseball = do.call(rbind, baseball) %>% mutate(
+  birthdate = as.Date(sprintf("%4d-%02d-%02d", Born, month, day))
+) %>% select(name = Name, birthdate) %>% arrange(birthdate)
 
 devtools::use_data(baseball, overwrite = TRUE)
