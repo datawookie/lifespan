@@ -9,7 +9,6 @@
 #'   \item{dow}{Day of week.}
 #'   \item{sex}{Gender.}
 #'   \item{count}{Number of births for specified year, month, day of week and sex.}
-#'   ...
 #' }
 #' @source Data gathered from http://www.cdc.gov/. Subsequently summarised.
 "births"
