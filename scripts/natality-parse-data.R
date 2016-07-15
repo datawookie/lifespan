@@ -11,7 +11,7 @@ births = lapply(list.files("data-raw", pattern = "^nat-.*.bz2", full.names = TRU
   mutate(D,
          month = factor(month, levels = 1:12, labels = month.abb),
          dow = factor(dow, levels = 1:7, labels = c("Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat")),
-         sex = factor(sex, labels = c("M", "F"))
+         sex = factor(sex, labels = c("F", "M"))
   )
 })
 
