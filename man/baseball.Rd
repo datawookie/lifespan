@@ -8,7 +8,6 @@
 \describe{
   \item{name}{Player's name.}
   \item{birthdate}{Player's date of birth.}
-  ...
 }}
 \source{
 Data meticulously scraped from \url{http://www.baseball-reference.com/}.

@@ -1,7 +1,6 @@
 library(dplyr)
 
 births = lapply(list.files("data-raw", pattern = "^nat-.*.bz2", full.names = TRUE), function(filename) {
-  print(filename)
   D = read.table(bzfile(filename), stringsAsFactors = FALSE)
   #
   names(D) <- c("year", "month", "dow", "sex")
