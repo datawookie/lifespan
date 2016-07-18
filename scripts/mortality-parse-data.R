@@ -22,11 +22,14 @@ deaths = lapply(list.files("data-raw", pattern = "^mort-.*.bz2", full.names = TR
 
 deaths = bind_rows(deaths)
 
+deathsage = group_by(deaths, age, sex) %>% summarise(count = n())
+
 deaths = group_by(deaths, year, month, sex) %>% summarise(
   count = n(),
   avgage = mean(age),
   medage = median(age),
   maxage = max(age)
   ) %>% data.frame
-# 
+#
 devtools::use_data(deaths, overwrite = TRUE)
+devtools::use_data(deathsage, overwrite = TRUE)
