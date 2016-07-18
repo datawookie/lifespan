@@ -1,6 +1,6 @@
 Package: lifespan
 Title: Data about births.
-Version: 0.0.1
+Version: 0.0.2
 Authors@R: person("Andrew", "Collier", email = "andrew@exegetic.biz", role = c("aut", "cre"))
 Description: Various data relating to births.
 Depends:
