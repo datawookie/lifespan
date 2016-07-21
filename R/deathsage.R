@@ -1,4 +1,4 @@
-#' Death Counts by Age and Gender
+#' Death Counts by Year, Age and Gender
 #'
 #' A dataset containing death statistics for the US. Data are for the period 1994 to 2014.
 #'

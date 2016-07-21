@@ -3,7 +3,7 @@
 \docType{data}
 \name{deathsage}
 \alias{deathsage}
-\title{Death Counts by Age and Gender}
+\title{Death Counts by Year, Age and Gender}
 \format{A data frame:
 \describe{
   \item{year}{Year.}
