@@ -7,9 +7,7 @@
 \format{A data frame:
 \describe{
   \item{year}{Year.}
-  \item{age}{Age at death.}
-  \item{sex}{Gender.}
-  \item{count}{Number of deaths by age and sex.}
+  \item{count}{US population in millions.}
 }}
 \source{
 Data gathered from http://www.multpl.com/united-states-population/.
