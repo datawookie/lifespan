@@ -6,6 +6,7 @@
 \title{Death Counts by Age and Gender}
 \format{A data frame:
 \describe{
+  \item{year}{Year.}
   \item{age}{Age at death.}
   \item{sex}{Gender.}
   \item{count}{Number of deaths by age and sex.}
@@ -17,7 +18,7 @@ Data gathered from http://www.cdc.gov/. Subsequently summarised.
 deathsage
 }
 \description{
-A dataset containing death statistics for the US.
+A dataset containing death statistics for the US. Data are for the period 1994 to 2014.
 }
 \keyword{datasets}
 

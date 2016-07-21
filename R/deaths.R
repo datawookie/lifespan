@@ -1,6 +1,6 @@
 #' Death Statistics 
 #'
-#' A dataset containing death statistics for the US.
+#' A dataset containing death statistics for the US. Data are for the period 1994 to 2014.
 #'
 #' @format A data frame:
 #' \describe{

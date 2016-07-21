@@ -43,9 +43,19 @@ group_by(deaths, sex, month) %>% summarise(count = sum(count)) %>%
   theme_minimal() + theme(legend.title = element_blank())
 
 NYEARS = length(unique(deaths$year))
+#
 ggplot(deathsage, aes(x = age, y = count / NYEARS / 1000)) +
   geom_area(aes(fill = sex), position = "identity", alpha = 0.5) +
   geom_line(aes(group = sex)) +
+  # facet_wrap(~ sex, ncol = 1) +
+  labs(x = "Age", y = "Deaths per Year [thousands]") +
+  scale_x_continuous(breaks = seq(0, 150, 10), limits = c(0, 120)) +
+  theme_minimal() + theme(legend.title = element_blank())
+#
+# Stacked version.
+#
+ggplot(deathsage, aes(x = age, y = count / NYEARS / 1000)) +
+  geom_area(aes(fill = sex), alpha = 0.5) +
   # facet_wrap(~ sex, ncol = 1) +
   labs(x = "Age", y = "Deaths per Year [thousands]") +
   scale_x_continuous(breaks = seq(0, 150, 10), limits = c(0, 120)) +
