@@ -60,3 +60,17 @@ ggplot(deathsage, aes(x = age, y = count / NYEARS / 1000)) +
   labs(x = "Age", y = "Deaths per Year [thousands]") +
   scale_x_continuous(breaks = seq(0, 150, 10), limits = c(0, 120)) +
   theme_minimal() + theme(legend.title = element_blank())
+
+ggplot(group_by(deathsage, year, age) %>% summarise(count = sum(count)), aes(x = year, y = age)) +
+  geom_raster(aes(fill = count)) +
+  labs(x = "Year", y = "Age") +
+  theme_minimal()
+
+ggplot(deathsage, aes(x = year, y = age)) +
+  geom_raster(aes(fill = count)) +
+  labs(x = "Year", y = "Age") +
+  scale_y_continuous(breaks = seq(0, 120, 10), limits = c(0, 110)) +
+  scale_fill_gradient("Deaths", low = "#FFFFFF") +
+  facet_wrap(~ sex) +
+  theme_minimal() +
+  theme(panel.grid = element_blank())
