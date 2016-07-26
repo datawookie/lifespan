@@ -1,3 +1,6 @@
+library(ggplot2)
+library(plotly)
+
 month.days <- data.frame(
   month = month.abb,
   days = c(31, 28.25, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31)
@@ -74,3 +77,12 @@ ggplot(deathsage, aes(x = year, y = age)) +
   facet_wrap(~ sex) +
   theme_minimal() +
   theme(panel.grid = element_blank())
+
+plot_ly(subset(lifetable, sex == "M"), x = age, y = lx / 1000, name = "Male", line = list(color = "blue")) %>%
+  add_trace(data = subset(lifetable, sex == "F"), x = age, y = lx / 1000, name = "Female", line = list(color = "red")) %>%
+  layout(
+    title = "Life Table",
+    showlegend = T,
+    xaxis = list(title = "Age", dtick = 10),
+    yaxis = list(title = "Proportion Living", ticksuffix = "%")
+  )
