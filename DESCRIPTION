@@ -8,5 +8,5 @@ Depends:
 License: LGPL-3
 Encoding: UTF-8
 LazyData: true
-Suggests: dplyr, tidyr
+Suggests: dplyr, tidyr, plotly
 RoxygenNote: 5.0.1
