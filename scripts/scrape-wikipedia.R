@@ -43,5 +43,3 @@ expectancy.plot <- plot_ly(expectancy, x = male, y = female,
     xaxis = list(title = "Male Life Expectancy [years]"),
     yaxis = list(title = "Female Life Expectancy [years]")
   )
-
-plotly_POST(expectancy.plot, filename = "life-expectancy-by-country")
