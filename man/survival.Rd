@@ -4,14 +4,28 @@
 \alias{survival}
 \title{Survival Probability}
 \usage{
-survival()
+survival(x, t, k = NA)
 }
 \arguments{
 \item{x}{Age.}
 
 \item{t}{Number of years survived beyond current age.}
+
+\item{k}{Die within this many years.
+  
+If k is not specified then the function will return the probability that a
+person aged x will live for at least another t years (they will live up to
+at least age x+t).
+
+If a value for k is given then the function will return the probability
+that a person aged x will live for at least another t years but then die
+within the following k years.}
 }
 \description{
 Survival Probability
+}
+\examples{
+survival(70, 5)
+survival(70, 5, 10)
 }
 

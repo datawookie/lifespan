@@ -11,7 +11,13 @@
 #' If a value for k is given then the function will return the probability
 #' that a person aged x will live for at least another t years but then die
 #' within the following k years.
-survival <- function(x, t, k = NA) {
+#' @import dplyr
+#' @import tidyr
+#' @examples 
+#' survival(70, 5)
+#' survival(70, 5, 10)
+#' @export
+survival <- function(x, t = 1, k = NA) {
   if (is.na(k)) {
     probabilities = lifetable[lifetable$x %in% c(x, x + t),] %>%
       group_by(sex) %>%
@@ -24,5 +30,3 @@ survival <- function(x, t, k = NA) {
   #
   probabilities %>% spread(sex, ratio) %>% unlist
 }
-survival(70, 5)
-survival(70, 5, 5)

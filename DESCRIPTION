@@ -1,6 +1,6 @@
 Package: lifespan
 Title: Data about births and deaths.
-Version: 0.0.4
+Version: 0.0.5
 Authors@R: person("Andrew", "Collier", email = "andrew@exegetic.biz", role = c("aut", "cre"))
 Description: Various data relating to births.
 Depends:
@@ -8,5 +8,6 @@ Depends:
 License: LGPL-3
 Encoding: UTF-8
 LazyData: true
-Suggests: dplyr, tidyr, plotly
+Imports: dplyr, tidyr
+Suggests: plotly
 RoxygenNote: 5.0.1

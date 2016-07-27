@@ -78,8 +78,8 @@ ggplot(deathsage, aes(x = year, y = age)) +
   theme_minimal() +
   theme(panel.grid = element_blank())
 
-plot_ly(subset(lifetable, sex == "M"), x = age, y = lx / 1000, name = "Male", line = list(color = "blue")) %>%
-  add_trace(data = subset(lifetable, sex == "F"), x = age, y = lx / 1000, name = "Female", line = list(color = "red")) %>%
+plot_ly(subset(lifetable, sex == "M"), x = x, y = lx / 1000, name = "Male", line = list(color = "blue")) %>%
+  add_trace(data = subset(lifetable, sex == "F"), x = x, y = lx / 1000, name = "Female", line = list(color = "red")) %>%
   layout(
     title = "Life Table",
     showlegend = T,
