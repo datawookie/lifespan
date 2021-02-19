@@ -4,7 +4,7 @@
 
 Install using the [`devtools`](https://cran.r-project.org/web/packages/devtools/index.html) package.
 ```
-devtools::install_github("DataWookie/lifespan")
+devtools::install_github("datawookie/lifespan")
 ```
 
 ## Data
